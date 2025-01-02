@@ -23,18 +23,18 @@ public class Tests
 
         //Page
         var page = await browser.NewPageAsync();
-        await page.GotoAsync("http://www.somee.com");
+        await page.GotoAsync("http://www.eaapp.somee.com");
         await page.ClickAsync("text=Login");
         await page.ScreenshotAsync(new PageScreenshotOptions
         {
             Path = "screenshot.jpg"
         });
 
-        await page.FillAsync("#Input_UserID", "admin");
-        await page.FillAsync("#Input_Password", "password");
-        await page.ClickAsync("text='Log In'");
+        await page.FillAsync("#UserName", "admin");
+        await page.FillAsync("#Password", "password");
+        await page.ClickAsync("text='Log in'");
 
-        var isLinkExists = await page.Locator("text='Invalid login attempt.'").IsVisibleAsync();
+        var isLinkExists = await page.Locator("text='Employee Details'").IsVisibleAsync();
         Assert.IsTrue(isLinkExists);
     }
 }
