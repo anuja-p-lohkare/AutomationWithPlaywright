@@ -9,6 +9,9 @@ public class NUnitPlaywrightTest: PageTest
     [Test]
     public async Task NUnitSampleTest()
     {
+        //To overcome auto wait option we can specify
+        //Page.SetDefaultTimeout(10);
+        
         await Page.GotoAsync("http://www.eaapp.somee.com");
         await Page.ClickAsync("text=Login");
         await Page.ScreenshotAsync(new PageScreenshotOptions
