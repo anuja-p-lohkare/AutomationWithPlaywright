@@ -1,0 +1,5 @@
+{
+  "browser": "Chrome",
+  "launchingUrl": "http://www.eaapp.somee.com",
+  "loginTestData": "TestData\\TestData.json"
+}
